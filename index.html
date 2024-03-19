@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> User Profile Card </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.card-container {
+    background-color: rgb(8, 8, 9);
+    color: white;
+    padding: 2rem;
+    width: 20rem;
+    margin: .5rem;
+    border-radius: .4rem;
+    box-shadow: 2px 3px 6px whitesmoke;
+}
+
+.cart-top-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-top-navigation li,
+.cart-top-navigation ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.cart-top-navigation ul i {
+    margin-left: 10px;
+}
+
+.user-image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.user-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.user-name,
+.about-user {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.user-name {
+    font-size: 1.4rem;
+}
+
+.hire-me {
+    /* width: 8rem; */
+    margin: 1.5rem auto;
+    display: block;
+    border: none;
+    padding: .8rem 1.6rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hire-me:hover {
+    background: radial-gradient(circle at 100% 107%, #fdf497 0%, #fdf497 5%#fd5949 45%, #d6249f 60%, #285aeb 90%);
+
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.social-item li {
+    list-style: none;
+    padding: 0.8rem;
+    border-radius: 15%;
+}
+
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.youtube {
+    background-color: #ff0000;
+}
+
+.twitter {
+    background-color: #1D9BF0;
+}
+
+.social-item i {
+    font-size: 1.5rem;
+}
+
+.social-item span {
+    margin-top: .5rem;
+}
+</style>
+
+<body>
+    <div class="card-container">
+        <div class="cart-top-navigation">
+            <li>
+                <i class="fa-solid fa-arrow-left"></i>
+            </li>
+            <ul>
+                <i id="heart" class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-bars"></i>
+            </ul>
+        </div>
+        <div class="user-image">
+           
+            <img src="img1.jpg" alt="">
+        </div>
+        <h2 class="user-name">Mr Yash Gupta</h2>
+        <p class="about-user">My name is Yash Gupta and I'm a frontend web developer</p>
+        <button class="hire-me">Hire Me</button>
+
+        <div class="social-container">
+            <div class="social-item">
+                <li class="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </li>
+                <span class="followers">100k</span>
+                <span class="followers">Followers</span>
+            </div>
+            <div class="social-item">
+                <li class="youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                </li>
+                <span class="subscribers">100k</span>
+                <span class="subscribers">Subscribers</span>
+            </div>
+            <div class="social-item">
+                <li class="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </li>
+                <span class="followers">100k</span>
+                <span class="followers">Followers</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index2.js">
+    const toggleHeart = document.getElementById('heart');
+    toggleHeart.addEventListener('click', () => {
+        toggleHeart.classList.toggle('fa-solid')
+        if (toggleHeart.classList == 'fa-regular fa-heart fa-solid') {
+            toggleHeart.style.color = 'red'
+        }
+        else {
+            toggleHeart.style.color = 'white'
+        }
+    })
+</script>
+</html>
